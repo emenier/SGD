@@ -1,5 +1,5 @@
 # SGD and Momentum Example
-![](./Result.png)
+![intro](./Result.jpg)
 
 
 ```python
