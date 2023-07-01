@@ -1,4 +1,5 @@
 # SGD and Momentum Example
+![](./Result.png)
 
 
 ```python
@@ -6,6 +7,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 import matplotlib
+%matplotlib inline
 seed = 42
 np.random.seed(42)
 matplotlib.rcParams.update({'font.size': 14})
@@ -153,19 +155,12 @@ plt.scatter(*true_w,marker='*',s= 200,color='black')
 plt.scatter(*w_init,marker='*',s= 200,color='white')
 plt.xticks([]); plt.yticks([]); plt.title('SGD + Momentum')
 plt.xlabel(r'$\theta_1$'); plt.ylabel(r'$\theta_2$',rotation=0)
-
+plt.savefig('Result.jpg',bbox_inches='tight',dpi=140)
 ```
 
 
-
-
-    Text(0, 0.5, '$\\theta_2$')
-
-
-
-
     
-![png](SGD_files/SGD_8_1.png)
+![png](SGD_files/SGD_8_0.png)
     
 
 
