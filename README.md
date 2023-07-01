@@ -105,7 +105,7 @@ def MSGD(inp_full,truth_full,w_init,lr,steps,divider,beta = 0.95):
         inp, truth = inp_full[idx], truth_full[idx]
         pred = f(inp,w)
         diff = (pred - truth)
-        loss = (0.5*diff**2).mean(0)
+        loss = (diff**2).mean(0)
         grad = np.mean(0.5*diff*f_grad(inp,w)[0],0)
         
         ema = beta * ema + (1-beta)*grad.reshape(-1,1)
